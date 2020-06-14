@@ -32,7 +32,7 @@
         <template v-if='navList.length'>
             <div v-for='navIndex in 2' :key='navIndex' :class="{'nav-box': navIndex === 1, 'hide-nav-box': navIndex === 2, 'hide': navIndex === 2 && navHide}">
                 <ul class="nav-list">
-                    <li v-for='(nav, index) in navList' :key='nav.id' class="nav" :class='{"active": index === navActiveIndex}' @click='handleNavClick(index)'>
+                    <li v-for='(nav, index) in navList' :key='nav.id' class="nav" :class='{"active": index === navActiveIndex}' @click='handleNavClick(index)' v-cloak>
                         {{ nav.title }}
                     </li>
                 </ul>
